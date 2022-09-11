@@ -1,11 +1,20 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApi.Dtos;
+using WebApi.Models;
 
 namespace WebApi.Profiles
 {
-    public class PlatformProfile
+    public class PlatformProfile : Profile
     {
+
+        public PlatformProfile()
+        {
+            CreateMap<Platform, PlatformReadDto>();           
+            CreateMap<PlatformCreateDto, Platform>();
+        }
     }
 }
